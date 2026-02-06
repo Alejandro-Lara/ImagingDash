@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 uvicorn main:app --reload
 
-### Frontend Instructions
+# Frontend Instructions
 
 Open your a terminal in the frontend directory and run
 
