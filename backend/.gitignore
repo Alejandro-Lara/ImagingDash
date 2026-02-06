@@ -3,7 +3,7 @@
 venv/
 env/
 ENV/
-*.cfg
+pyvenv.cfg
 
 # Dependencies
 __pycache__/
