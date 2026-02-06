@@ -33,7 +33,13 @@ uvicorn main:app --reload
 Open your a terminal in the frontend directory and run
 
 ### Install dependencies
+
 npm install
 
 ### Run the frontend Development Server
+
 npm run dev
+
+### Frontend Usage
+
+You can now access the interface through your browser on http://localhost:5173/
