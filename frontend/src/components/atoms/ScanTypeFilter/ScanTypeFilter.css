@@ -1,0 +1,41 @@
+.scan-type-filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scan-type-filter-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.scan-type-filter-select {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 15px;
+  cursor: pointer;
+  min-width: 140px;
+  transition: all 0.2s ease;
+  appearance: none;
+}
+
+.scan-type-filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.scan-type-filter-select:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+
+.scan-type-filter-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f9fafb;
+}

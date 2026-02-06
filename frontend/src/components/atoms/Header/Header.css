@@ -1,0 +1,12 @@
+
+.header-container {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0;
+}

@@ -1,0 +1,81 @@
+.scan-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.scan-modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.scan-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.scan-modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a202c;
+  font-weight: 600;
+}
+
+.scan-modal-close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #a0aec0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.scan-modal-close-button:hover {
+  background-color: #f7fafc;
+  color: #4a5568;
+}
+
+.scan-modal-details {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.scan-modal-detail-row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.scan-modal-detail-label {
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 140px;
+}
+
+.scan-modal-detail-value {
+  color: #1a202c;
+  font-size: 1rem;
+  margin-left: auto;
+}

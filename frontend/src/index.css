@@ -1,0 +1,13 @@
+.textFieldsContainer{
+  display: inline-flex;
+  justify-content:left;
+  gap: 10px;
+  padding-left: 2%;
+  width: 100%;
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}

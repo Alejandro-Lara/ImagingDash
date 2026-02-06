@@ -1,0 +1,72 @@
+.scan-table-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.scan-table-wrapper {
+  overflow-x: auto;
+}
+
+.scan-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.scan-table-head-row {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.scan-table-header-cell {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.scan-table-row {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+}
+
+.scan-table-row.hovered {
+  background-color: #f8fafc;
+}
+
+.scan-table-cell {
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #111827;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.scan-table-cell.last {
+  white-space: normal;
+}
+
+.scan-table-no-data {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.scan-table-footer {
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #6b7280;
+}
