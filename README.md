@@ -44,6 +44,16 @@ npm run dev
 
 You can now access the interface through your browser on http://localhost:5173/
 
+# Architecture
+
+The frontend just uses python, fastApi, and pydantic models, as well as uvicorn and virtual environments which are typical for dev servers.
+No real decision making for those, they were all common practice to use.
+
+The backend is using react, axios, and vite
+I'm using axios to make web requests, and I chose it out of familiarity
+Vite is used for the dev server and building. I wasnt really familiar with it at first but the AI tool I used to boiler plate the react project
+suggested it, and it was lightweight enough for me to not to get rid of it like some other things it suggested.
+
 # Tradeoffs and design
 
 For the backend my trade off descision was with data storage. I chose to use an in memory list instead of a database like sqllite.
