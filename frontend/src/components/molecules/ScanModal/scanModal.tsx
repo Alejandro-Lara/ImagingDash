@@ -13,7 +13,6 @@ function ScanModal({ scan, isOpen, onClose }: ScanModalProps) {
     <div className="scan-modal-overlay" onClick={(e) => e.stopPropagation()}>
       <div 
         className="scan-modal-content"
-        onClick={(e) => e.stopPropagation()}
       >
         <div className="scan-modal-header">
           <h2 className="scan-modal-title">Scan Details</h2>

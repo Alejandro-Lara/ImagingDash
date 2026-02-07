@@ -8,11 +8,13 @@ import Button from './components/atoms/Button/Button';
 import TextFilterField from './components/atoms/TextFilterField/TextFilterField';
 
 function App() {
+  //states used to track the currently displayed scans, page and total amount of scans available with the current filters
   const [scans, setScans] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);//The loading state can be used to display a loading icon and lock the ui while a request is happening
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
 
+  //State and helper functions for displaing the scan focus modal
   const [selectedScan, setSelectedScan] = useState<Scan | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,6 +43,7 @@ function App() {
     scan_id: null
   });
 
+  //Async function that fetches scans for the given page and using the current filters state. 
   const fetchScans = async (currentPage) => {
     setLoading(true);
     try {
@@ -50,7 +53,7 @@ function App() {
         ...filters  // Spread filter values (null/empty = no filter)
       };
       
-      const response = await axios.post('http://127.0.0.1:8000/scans/search', requestBody);
+      const response = await axios.post('http://127.0.0.1:8000/scans/search', requestBody); //Hardcoded enpoint for dev purposes
       setTotal(response.data.total);
       setScans(response.data.items || []);
       setPage(currentPage);
@@ -61,10 +64,13 @@ function App() {
     setLoading(false);
   };
 
+
+  //Fetch the first page on initialization
   useEffect(() => {
     fetchScans(1);
   }, []);
 
+  //Helper functions for the next and previous page buttons
   const nextPage = () =>{
     if(page < total){
       fetchScans(page+1);

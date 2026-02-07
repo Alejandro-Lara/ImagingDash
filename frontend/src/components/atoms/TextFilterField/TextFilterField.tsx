@@ -23,6 +23,8 @@ function TextFilterField({
   step,
   disabled = false
 }: TextFilterFieldProps) {
+
+  //helper function that propagates the new field value to the onChange prop
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value || null;
     onChange(newValue);
