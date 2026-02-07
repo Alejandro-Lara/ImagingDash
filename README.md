@@ -43,3 +43,19 @@ npm run dev
 ### Frontend Usage
 
 You can now access the interface through your browser on http://localhost:5173/
+
+# Tradeoffs and design
+
+For the backend my trade off descision was with data storage. I chose to use an in memory list instead of a database like sqllite.
+The reason was just to keep things as simple as possible and save my time for developing the frontend which I knew would take more effort.
+Also for a larger web app I'd look for some sort of library that makes expanding the filtering and paging scheme easier.
+
+I feel like the backend design is very simple and typical for the features outlined. 
+
+For the frontend my main trade offs involved simplifying the UI for time constraints. I would have liked to add more filtering options and a clear button
+for the the table, but ended up with just the required fields. Even though the backend is prepared for more filtering. Was also planning on adding a loading animation and light/dark mode (controlled through the header), but had to cut it.
+I also hardcoded the api endpoint on the frontend, when it should be hidden in a real web app.
+Finally, I had to simplify the paging logic on the frontend. Usually I would have kept fetched pages stored in memory so that I don't have to re-request them unless the filters change. Only one page of data is stored at a time, so changing pages always causes a request.
+I organized my components into molecules and atoms based on complexity, which is typical. I probably could have broken down my molecules a bit more, but I think it's flexible enough for these features.
+
+In the past I've used tools to automatically generate frontend models and interface classes by analyzing the source code of the backend. Definitely would use that, instead of working manually if I had to do this again.
